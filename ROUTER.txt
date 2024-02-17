@@ -17,9 +17,9 @@ UUID= # use uuidgen <interface> to generate this
 DEVICE=ens18
 ONBOOT=yes
 IPADDR=172.16.4.1  # external/internal router ip
-NETMASK=255.255.0.0 OR 255.255.255.0
+NETMASK=255.255.0.0 (external) OR 255.255.255.0 (internal)
 ZONE=external/internal
-GATEWAY=172.16.0.1 # external gateway to scoring box OR 255.255.255.0 # internal gateway
+GATEWAY=172.16.0.1 # external gateway to scoring box
 DNS1= # internal/external dns ip
 
 Then restart: sudo systemctl restart network
