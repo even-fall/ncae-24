@@ -27,5 +27,17 @@ Then restart: sudo systemctl restart network
 Then create port forwarding rule:
 sudo firewall-cmd --zone=external --add-forward-port=port=80:proto=tcp:toport=80:toaddr=192.168.t.1 --permanent
 
-Then create a gateway on the web server box
+Then create a gateway on the web server box by editing the 00-installer-config.yaml
+Here's a template:
+
+network:
+  ethernets:
+    ens18:
+      gateway4: 192.168.1.1
+      dhcp4: no
+      addresses:
+        - 192.168.1.3/24
+      nameservers:
+        addresses: [1.1.1.1]
+  version: 2
 
