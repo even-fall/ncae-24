@@ -1,0 +1,46 @@
+config file location: /etc/sysconfig/network-scripts
+
+You may have to create new config files for the interfaces you're provided. Here's a general template:
+
+EXTERNAL CONFIG
+TYPE=Ethernet
+PROXY_METHOD=none
+BROWSER_ONLY=no
+BOOTPROTO=static
+DEFROUTE=yes
+IPV4_FAILURE_FATAL=no
+IPV6INIT=yes
+IPV6_AUTOCONF=yes
+IPV6_FAILURE_FATAL=no
+IPV6_ADDR_GEN_MODE=stable-privacy
+NAME=ens18
+UUID=deb50aee-c3a1-471a-a9e8-be60b3b36203
+DEVICE=ens18
+ONBOOT=yes
+IPADDR=172.16.4.1  # external router ip
+NETMASK=255.255.0.0
+ZONE=external/internal
+GATEWAY=172.16.0.1 # external gateway to scoring box OR 255.255.255.0 # internal gateway
+
+
+INTERAL CONFIG
+TYPE=Ethernet
+PROXY_METHOD=none
+BROWSER_ONLY=no
+BOOTPROTO=static
+DEFROUTE=yes
+IPV4_FAILURE_FATAL=no
+IPV6INIT=yes
+IPV6_AUTOCONF=yes
+IPV6_DEFROUTE=yes
+IPV6_FAILURE_FATAL=no
+IPV6_ADDR_GEN_MODE=stable-privacy
+NAME=ens19
+UUID=ccff9c25-cc41-4962-9590-3afd6fe5c4d7
+DEVICE=ens19
+ONBOOT=yes
+IPADDR=192.168.1.1
+NETMASK=255.255.0.0
+ZONE=internal
+DNS1=192.168.1.2
+GATEWAY=255.255.255.0
