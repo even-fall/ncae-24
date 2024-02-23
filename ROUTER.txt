@@ -42,3 +42,4 @@ network:
         addresses: [1.1.1.1]
   version: 2
 
+then set up a gateway in the kali box to the scoring box, wait for firewall to finish setup, then try and ping scoring box. if you can, you can get points. if you can't, fix it.
