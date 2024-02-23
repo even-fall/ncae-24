@@ -33,7 +33,7 @@ Here's a template:
 
 network:
   ethernets:
-    ens18:
+    ens18:  # external interface
       gateway4: 192.168.T.1   # internal IP of router
       dhcp4: no
       addresses:
