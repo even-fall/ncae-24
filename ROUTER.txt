@@ -23,6 +23,7 @@ GATEWAY=172.16.0.1 # external gateway to scoring box
 DNS1= # internal/external dns ip
 
 Then restart: sudo systemctl restart network
+(changes may not show up with ip a command; try ifconfig)
 
 Then create port forwarding rule:
 sudo firewall-cmd --zone=external --add-forward-port=port=80:proto=tcp:toport=80:toaddr=192.168.t.1 --permanent
