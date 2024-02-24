@@ -20,7 +20,7 @@ IPADDR=172.16.4.T  # external/internal router ip
 NETMASK=255.255.0.0 (external) OR 255.255.255.0 (internal)
 ZONE=external/internal
 GATEWAY=172.16.0.1 # external gateway to scoring box
-DNS1= # internal/external dns ip
+DNS1= # alex does this
 
 Then restart: sudo systemctl restart network
 (changes may not show up with ip a command; try ifconfig)
